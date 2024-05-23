@@ -10,26 +10,22 @@ fun leerDataSet(direccionArchivo: String): (List<DataPoint>) {
         if (i > 1) { // Skip the first row (header)
             val datosI = linea.split(",")
 
-            val fixed_acidity: Double = datosI.get(0).toDouble()
-            val volatile_acidity: Double = datosI.get(1).toDouble()
-            val citric_acid: Double = datosI.get(2).toDouble()
-            val residual_sugar: Double = datosI.get(3).toDouble()
-            val chlorides: Double = datosI.get(4).toDouble()
-            val free_sulfur_dioxide: Double = datosI.get(5).toDouble()
-            val total_sulfur_dioxide: Double = datosI.get(6).toDouble()
-            val density: Double = datosI.get(7).toDouble()
-            val pH: Double = datosI.get(8).toDouble()
-            val sulphates: Double = datosI.get(9).toDouble()
-            val alcohol: Double = datosI.get(10).toDouble()
-            val quality: Double = datosI.get(11).toDouble()
+            val mes: Double = datosI.get(0).toDouble()
+            val dia: Double = datosI.get(0).toDouble()
+            val year: Double = datosI.get(0).toDouble()
+            val hora: Double = datosI.get(0).toDouble()
+            val impresiones: Double = datosI.get(0).toDouble()
+            val alcance: Double = datosI.get(0).toDouble()
+            val comentarios: Double = datosI.get(0).toDouble()
+            val compartidos: Double = datosI.get(0).toDouble()
+            val clics: Double = datosI.get(0).toDouble()
+            val reacciones: Double = datosI.get(0).toDouble()
 
-            datos.add(DataPoint(fixed_acidity,volatile_acidity,citric_acid,
-                residual_sugar,chlorides,free_sulfur_dioxide,
-                total_sulfur_dioxide,density,pH,sulphates,alcohol,quality))
+            datos.add(DataPoint(mes,dia,year,
+                hora,impresiones,alcance,
+                comentarios,compartidos,clics,
+                reacciones))
         }
-
-
-
     }
 
     return datos.toList()

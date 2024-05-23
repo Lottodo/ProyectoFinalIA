@@ -4,7 +4,7 @@ import kotlin.math.sqrt
 
 fun generarFilaTabla(i: Int, datosPrueba: List<DataPoint>, datosEntrenamiento: List<DataPoint>, k: Int, metodo: Int): String {
     val prediccion = String.format("%.1f", predecirRegresionKNN(datosPrueba.get(i), datosEntrenamiento, k, metodo))
-    val realidad = datosPrueba.get(i).quality
+    val realidad = datosPrueba.get(i).reacciones
     val id = i+1
 
     //Tabla
@@ -19,7 +19,7 @@ fun generarFilaTabla(i: Int, datosPrueba: List<DataPoint>, datosEntrenamiento: L
 
 fun imprimirDatos(i: Int, datosPrueba: List<DataPoint>, datosEntrenamiento: List<DataPoint>, k: Int, metodo: Int): String {
     val prediccion = String.format("%.1f", predecirRegresionKNN(datosPrueba.get(i), datosEntrenamiento, k, metodo))
-    val realidad = datosPrueba.get(i).quality
+    val realidad = datosPrueba.get(i).reacciones
     val id = i+1
 
     //Puro texto
@@ -29,14 +29,8 @@ fun imprimirDatos(i: Int, datosPrueba: List<DataPoint>, datosEntrenamiento: List
 
 
     //Tabla
-    val cabecera = listOf("ID","Prediccion","Realidad")//,"0","1","2","3","4")
-    //val evals = generarEvaluaciones(prediccion, realidad)
+    val cabecera = listOf("ID","Prediccion","Realidad")
     val dato = listOf("$id",prediccion, realidad.toString())
-    //    evals.get(0),
-    //    evals.get(1),
-    //    evals.get(2),
-    //    evals.get(3),
-    //    evals.get(4),)
 
     val tabla = "\n${cabecera.joinToString(" | ", prefix = "| ", postfix = " |") { it.padEnd(10) }}" +
             "\n${dato.joinToString(" | ", prefix = "| ", postfix = " |") { it.padEnd(10) }}"

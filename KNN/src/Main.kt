@@ -17,11 +17,11 @@ fun main() {
 
     //Pedir datos
     val archivoEntrenamiento = seleccionarArchivo("Seleccionar datos de entrenamiento",
-        "resources/winequality-red_entrenamiento.csv")
-    println("Archivo '$archivoEntrenamiento' con ID: ${leerDataSetID(archivoEntrenamiento)} seleccionado como entrenamiendo")
+        "resources/TestingDSFormat.csv")
+    println("Archivo '$archivoEntrenamiento' seleccionado como entrenamiendo")
     val archivoPrueba = seleccionarArchivo("Seleccionar datos de prueba",
-        "resources/winequality-red_prueba.csv")
-    println("Archivo '$archivoPrueba' con ID: ${leerDataSetID(archivoPrueba)} seleccionado como prueba")
+        "resources/TestingDSFormat.csv")
+    println("Archivo '$archivoPrueba' seleccionado como prueba")
 
     val datosEntrenamiento = leerDataSet(archivoEntrenamiento)
     val datosPrueba = leerDataSet(archivoPrueba)

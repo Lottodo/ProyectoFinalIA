@@ -54,9 +54,9 @@ fun leerDataSetFechaHoras(direccionArchivo: String): List<String> {
 
 }
 
-fun crearArchivoDatosProcesados(tabla: List<String>) {
+fun crearArchivoDatosProcesados(tabla: List<String>, dirFile: String) {
 
-    File("resources/TestingDS.csv").bufferedWriter().use { output ->
+    File(dirFile).bufferedWriter().use { output ->
         tabla.forEach { linea ->
             output.write(linea)
             output.newLine()
@@ -66,11 +66,11 @@ fun crearArchivoDatosProcesados(tabla: List<String>) {
     println("\nArchivo datosProcesados.csv creado en la carpeta resources del proyecto")
 }
 
-fun formatearDataSet(datosFechasHoras: List<String>): List<String> {
+fun formatearDataSet(datosFechasHoras: List<String>, dirFile: String): List<String> {
 
-    val archivo = File("resources/TestingDS.csv")
+    val archivo = File(dirFile)
     val datos = mutableListOf<String>()
-    datos.add(archivo.readLines().get(0))
+    datos.add(archivo.readLines().get(0).replace("FechaHora", "Mes,Dia,Year,Hora"))
 
     archivo.readLines().forEachIndexed {i, linea ->
         if (i > 0) {
@@ -94,7 +94,7 @@ fun formatearDataSet(datosFechasHoras: List<String>): List<String> {
 
 fun exportarDataSetProcesado(tabla: List<String>, name: String) {
 
-    File("resources/" + name + ".csv").bufferedWriter().use { output ->
+    File("resources/" + name + "Formateado.csv").bufferedWriter().use { output ->
         tabla.forEach { linea ->
             output.write(linea)
             output.newLine()
