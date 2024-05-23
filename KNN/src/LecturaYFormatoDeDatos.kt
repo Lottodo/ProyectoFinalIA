@@ -11,15 +11,15 @@ fun leerDataSet(direccionArchivo: String): (List<DataPoint>) {
             val datosI = linea.split(",")
 
             val mes: Double = datosI.get(0).toDouble()
-            val dia: Double = datosI.get(0).toDouble()
-            val year: Double = datosI.get(0).toDouble()
-            val hora: Double = datosI.get(0).toDouble()
-            val impresiones: Double = datosI.get(0).toDouble()
-            val alcance: Double = datosI.get(0).toDouble()
-            val comentarios: Double = datosI.get(0).toDouble()
-            val compartidos: Double = datosI.get(0).toDouble()
-            val clics: Double = datosI.get(0).toDouble()
-            val reacciones: Double = datosI.get(0).toDouble()
+            val dia: Double = datosI.get(1).toDouble()
+            val year: Double = datosI.get(2).toDouble()
+            val hora: Double = datosI.get(3).toDouble()
+            val impresiones: Double = datosI.get(4).toDouble()
+            val alcance: Double = datosI.get(5).toDouble()
+            val comentarios: Double = datosI.get(6).toDouble()
+            val compartidos: Double = datosI.get(7).toDouble()
+            val clics: Double = datosI.get(8).toDouble()
+            val reacciones: Double = datosI.get(9).toDouble()
 
             datos.add(DataPoint(mes,dia,year,
                 hora,impresiones,alcance,

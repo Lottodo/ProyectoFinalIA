@@ -9,7 +9,7 @@ fun generarFilaTabla(i: Int, datosPrueba: List<DataPoint>, datosEntrenamiento: L
 
     //Tabla
 
-    val evals = generarEvaluaciones()
+    //val evals = generarEvaluaciones()
     val dato = listOf("$id",prediccion, realidad)
 
     val fila = dato.joinToString(",")

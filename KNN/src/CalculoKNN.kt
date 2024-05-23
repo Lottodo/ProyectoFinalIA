@@ -32,10 +32,10 @@ fun distanciaEuclidiana(p1: DataPoint, p2: DataPoint): Double{
             (dis_year * dis_year) +
             (dis_hora * dis_hora) +
             (dis_impresiones * dis_impresiones) +
-            (dis_alcance * dis_alcance) +
-            (dis_comentarios * dis_comentarios) +
-            (dis_compartidos * dis_compartidos) +
-            (dis_clics * dis_clics))
+            (dis_alcance * dis_alcance))// +
+            //(dis_comentarios * dis_comentarios) +
+            //(dis_compartidos * dis_compartidos) +
+            //(dis_clics * dis_clics))
 
     return dis
 }
@@ -52,8 +52,8 @@ fun distanciaManhattan(p1: DataPoint, p2: DataPoint): Double {
     val dis_clics = abs(p1.clics - p2.clics)
 
     val dis = dis_mes + dis_dia + dis_year +
-            dis_hora + dis_impresiones + dis_alcance +
-            dis_comentarios + dis_compartidos + dis_clics
+            dis_hora + dis_impresiones + dis_alcance// +
+            //dis_comentarios + dis_compartidos + dis_clics
 
     return dis
 }
