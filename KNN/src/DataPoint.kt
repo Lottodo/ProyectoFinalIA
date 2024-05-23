@@ -1,0 +1,13 @@
+data class DataPoint(
+    val fixed_acidity: Double,
+    val volatile_acidity: Double,
+    val citric_acid: Double,
+    val residual_sugar: Double,
+    val chlorides: Double,
+    val free_sulfur_dioxide: Double,
+    val total_sulfur_dioxide: Double,
+    val density: Double,
+    val pH: Double,
+    val sulphates: Double,
+    val alcohol: Double,
+    val quality: Double)
