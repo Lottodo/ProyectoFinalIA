@@ -89,7 +89,7 @@ fun formatearDataSet(datosFechasHoras: List<String>, dirFile: String): List<Stri
         }
     }
 
-    return datos
+    return datos.shuffled()
 }
 
 fun exportarDataSetProcesado(tabla: List<String>, name: String) {

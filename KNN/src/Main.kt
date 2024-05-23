@@ -1,3 +1,5 @@
+import java.io.File
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
@@ -15,12 +17,14 @@ fun main() {
     tabla.removeAt(0)
 
 
+
+
     //Pedir datos
     val archivoEntrenamiento = seleccionarArchivo("Seleccionar datos de entrenamiento",
-        "resources/TestingDSFormat.csv")
+        "resources/DatasetLimpioFormateado70.csv")
     println("Archivo '$archivoEntrenamiento' seleccionado como entrenamiendo")
     val archivoPrueba = seleccionarArchivo("Seleccionar datos de prueba",
-        "resources/TestingDSFormat.csv")
+        "resources/DatasetLimpioFormateado30.csv")
     println("Archivo '$archivoPrueba' seleccionado como prueba")
 
     val datosEntrenamiento = leerDataSet(archivoEntrenamiento)
