@@ -1,4 +1,14 @@
-Mes,Dia,Year,Hora,Impresiones,Alcance,Reacciones
+@relation DatasetLimpioFormateado
+
+@attribute Mes numeric
+@attribute Dia numeric
+@attribute Year numeric
+@attribute Hora numeric
+@attribute Impresiones numeric
+@attribute Alcance numeric
+@attribute Reacciones numeric
+
+@data
 9,14,2022,909,5611,5227,20
 4,23,2022,604,82,76,1
 2,21,2023,542,8572,5179,60
